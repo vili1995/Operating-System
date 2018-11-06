@@ -71,7 +71,7 @@ public class banker {
 			System.out.println("All process can't be allocated safely");
 	}
 	
-	public static void main (String agrs[]){
+	public static void main (String [] agrs){
 		new banker().isSafe();
 	}
 }
