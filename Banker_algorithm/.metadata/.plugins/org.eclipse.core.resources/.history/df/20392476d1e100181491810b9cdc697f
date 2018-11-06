@@ -35,7 +35,6 @@ public class banker {
 		sn.close();
 	}
 	
-	//calculate the need matrix
 	private int [][] cal_need(){
 		for (int i=0;i<pro;i++)
 			for (int j=0;j<re;j++)
@@ -43,7 +42,6 @@ public class banker {
 		return need;
 	}
 	
-	//Check if the requested resource is available or not
 	private boolean check(int i){
 		for (int j=0;j<re;j++)
 			if (avail[0][j]<need[i][j])
@@ -52,8 +50,8 @@ public class banker {
 	}
 	
 	public void isSafe(){
-		input(); //collecting data from the user
-		cal_need(); //calculation here
+		input();
+		cal_need();
 		boolean done[] = new boolean [pro];
 		int j = 0;
 		while(j<pro){//until all process allocate
